@@ -45,6 +45,11 @@
                                     <constraint firstAttribute="height" constant="136" id="JgU-Ms-Gfu"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="280" id="Yrn-9C-ex2"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="dDH-fY-4K3">
                                 <rect key="frame" x="20" y="171" width="280" height="125"/>
@@ -53,7 +58,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="125"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="frr-9b-9fz">
-                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="Imj-f6-QZi"/>
                                                 </constraints>
@@ -62,16 +67,20 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="G" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8oD-t1-2ws">
-                                                <rect key="frame" x="0.0" y="55" width="30" height="30"/>
+                                                <rect key="frame" x="0.0" y="50" width="30" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="Bjd-J0-gsI"/>
+                                                    <constraint firstAttribute="height" constant="25" id="miG-5R-bzM"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="B" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ed5-9G-mm8">
-                                                <rect key="frame" x="0.0" y="110" width="30" height="15"/>
+                                                <rect key="frame" x="0.0" y="100" width="30" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="cI7-2q-fN4"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -193,6 +202,9 @@
                                     <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                     <color key="baseBackgroundColor" red="0.84985468500000005" green="0.71043559629999997" blue="0.23331542899999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="didDoneButton:" destination="H8F-xH-h3b" eventType="touchUpInside" id="I5X-QW-Sc0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7f7-92-TRz"/>
@@ -211,6 +223,17 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1Gh-7C-vmp"/>
+                    <connections>
+                        <outlet property="blueSlider" destination="Rht-xX-LdA" id="Npn-zi-XPp"/>
+                        <outlet property="greenSlider" destination="tWH-Oi-CTp" id="YYv-bA-tbY"/>
+                        <outlet property="numberBlueLabel" destination="QK6-8N-UlV" id="Vla-bB-REu"/>
+                        <outlet property="numberGreenLabel" destination="Lgj-b1-0zW" id="2Rp-JL-8pS"/>
+                        <outlet property="numberRedLabel" destination="xKy-Hy-n9Q" id="Qbl-U0-qff"/>
+                        <outlet property="poleBlueTF" destination="isN-a7-aGg" id="CgW-7u-8me"/>
+                        <outlet property="poleGreenTF" destination="JGl-fE-IUS" id="XzY-n4-pqN"/>
+                        <outlet property="poleRedTF" destination="Bvb-d1-bAE" id="jBq-wr-Qzs"/>
+                        <outlet property="redSlider" destination="JEm-aC-FDd" id="Lfp-xQ-WQS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qxx-lX-BlD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
