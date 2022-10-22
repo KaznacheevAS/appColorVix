@@ -9,21 +9,15 @@ import UIKit
 
 class BackgroundViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        guard let settingVC = segue.destination as? SettingRGBViewController else { return }
+        settingVC.delegate = self
+        settingVC.color = view.backgroundColor
     }
-    */
+}
 
+extension BackgroundViewController: ColorSettingRGBViewControllerDelegate {
+    func colorUI(_ ciiColor: UIColor) {
+        view.backgroundColor = ciiColor
+    }
 }
